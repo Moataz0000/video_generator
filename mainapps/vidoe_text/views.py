@@ -380,10 +380,12 @@ def progress(request,text_file_id):
             messages.error(request,f"{text_file.progress}")
             return JsonResponse({'error': text_file.progress})
 
-@login_required
-def progress_page(request,al_the_way,text_file_id):
+from django.views.decorators.cache import cache_page
 
-    return render(request,'vlc/progress.html',{"al_the_way":al_the_way,'text_file_id':text_file_id})
+@cache_page(60)  # Cache for 1 minute
+@login_required
+def progress_page(request, al_the_way, text_file_id):
+    return render(request, 'vlc/progress.html', {"al_the_way": al_the_way, 'text_file_id': text_file_id})
 
 @login_required
 @check_credits_and_ownership(textfile_id_param='textfile_id', credits_required=1)
