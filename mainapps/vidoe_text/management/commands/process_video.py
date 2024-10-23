@@ -68,8 +68,8 @@ RESOLUTIONS = {
 # Suppress specific Pydantic warnings
 warnings.filterwarnings("ignore", category=UserWarning, )
 
-openai.api_key = 'sk-proj-mo9iZjhl3DNjXlxMcx1FT3BlbkFJz5UCGoPBLnSQhh2b2stB' # write your openai api
-PEXELS_API_KEY = 'ljSCcK6YYuU0kNyMTADStB8kSOWdkzHCZnPXc26QEHhaHYqeXusdnzaA' # write your pexels
+# openai.api_key = 'sk-proj-mo9iZjhl3DNjXlxMcx1FT3BlbkFJz5UCGoPBLnSQhh2b2stB' # write your openai api
+# PEXELS_API_KEY = 'ljSCcK6YYuU0kNyMTADStB8kSOWdkzHCZnPXc26QEHhaHYqeXusdnzaA' # write your pexels
 # Base URL for Pexels API
 BASE_URL = 'https://api.pexels.com/videos/search'
 os.environ['PYTHONIOENCODING'] = 'UTF-8'
